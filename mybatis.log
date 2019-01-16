@@ -1,0 +1,21 @@
+[DEBUG][2019-01-16 17:12:14,688][druid.sql.Connection]{conn-10001} connected
+[DEBUG][2019-01-16 17:12:14,719][druid.sql.Connection]{conn-10002} connected
+[DEBUG][2019-01-16 17:12:14,762][druid.sql.Connection]{conn-10003} connected
+[DEBUG][2019-01-16 17:12:14,789][druid.sql.Connection]{conn-10004} connected
+[DEBUG][2019-01-16 17:12:14,807][druid.sql.Connection]{conn-10005} connected
+[DEBUG][2019-01-16 17:12:14,811][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][2019-01-16 17:12:14,815][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][2019-01-16 17:12:14,819][druid.sql.Connection]{conn-10005} pool-connect
+[DEBUG][2019-01-16 17:12:14,824][druid.sql.Statement]{conn-10005, stmt-20000} created
+[DEBUG][2019-01-16 17:12:14,941][druid.sql.Statement]{conn-10005, stmt-20000, rs-50000} query executed. 112.849904 millis. /* ping */ SELECT 1
+[DEBUG][2019-01-16 17:12:14,942][druid.sql.ResultSet]{conn-10005, stmt-20000, rs-50000} open
+[DEBUG][2019-01-16 17:12:14,945][druid.sql.ResultSet]{conn-10005, stmt-20000, rs-50000} Header: [1]
+[DEBUG][2019-01-16 17:12:14,948][druid.sql.ResultSet]{conn-10005, stmt-20000, rs-50000} Result: [1]
+[DEBUG][2019-01-16 17:12:14,950][druid.sql.ResultSet]{conn-10005, stmt-20000, rs-50000} closed
+[DEBUG][2019-01-16 17:12:14,951][druid.sql.Statement]{conn-10005, stmt-20000} closed
+[DEBUG][2019-01-16 17:12:14,952][druid.sql.Connection]{conn-10005} pool-recycle
+[DEBUG][2019-01-16 17:13:05,064][druid.sql.Connection]{conn-10001} closed
+[DEBUG][2019-01-16 17:13:05,065][druid.sql.Connection]{conn-10002} closed
+[DEBUG][2019-01-16 17:13:05,066][druid.sql.Connection]{conn-10003} closed
+[DEBUG][2019-01-16 17:13:05,067][druid.sql.Connection]{conn-10004} closed
+[DEBUG][2019-01-16 17:13:05,068][druid.sql.Connection]{conn-10005} closed

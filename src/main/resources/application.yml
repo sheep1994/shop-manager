@@ -1,0 +1,48 @@
+## 配置端口号
+server:
+  port: 8080
+## 配置数据源
+spring:
+  datasource:
+    url: jdbc:mysql://172.16.32.130:3306/talent-school?allowMultiQueries=true&useUnicode=true&amp&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    ## 以下配置在Spring Boot中并没有配置，因此需要我们额外进行配置
+    # 初始化大小，最小，最大
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    # 配置获取连接等待超时的时间
+    maxWait: 60000
+    # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    # 配置一个连接在池中最小生存时间，单位是毫秒
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    # 打开PSCache，并且指定每个连接上PSCache的大小
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    ## 配置监控统计拦截的filter，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,log4j
+    ## 自定义过滤器， proxyFilters: 类全路径
+    # 合并多个DruidDataSource的监控数据
+    useGlobalDataSourceStat: true
+    # 通过connectionProperties属性打开mergeSql功能；慢SQL记录
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+# mybatis配置
+mybatis:
+  type-aliases-package: com.talent.model
+  # 扫描mapper.xml文件
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  config-location: classpath:mybatis/mybatis-config.xml
+
+# 打印sql语句
+logging:
+  level: debug
