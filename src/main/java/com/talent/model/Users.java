@@ -1,7 +1,6 @@
 package com.talent.model;
 
 import com.alibaba.fastjson.JSON;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -45,6 +44,18 @@ public class Users implements Serializable {
     private String weiXin;
 
     private Integer campusId;
+
+    public Users(String phone2, String password2, String nickname2) {
+        phone = phone2;
+        password = password2;
+        nickname = nickname2;
+        type = 2;
+        createTime = new Date();
+        lastLoginDate = new Date();
+    }
+
+    public Users() {
+    }
 
     @Override
     public String toString() {
